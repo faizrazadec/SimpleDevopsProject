@@ -21,4 +21,4 @@ sudo systemctl enable docker
 
 # Run the Docker container exposing port 8280
 sudo docker pull faizrazadec/simple_devops:latest
-sudo docker run -d -p 8082:80 faizrazadec/simple_devops
+sudo docker run -d --restart always -p 9090:80 faizrazadec/simple_devops:latest
