@@ -10,17 +10,17 @@ resource "aws_security_group" "allow_ssh_and_http" {
   }
 
   ingress {
-    from_port   = 5000
-    to_port     = 5000
+    from_port   = 8082
+    to_port     = 8082
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # Allows HTTP access from any IP
+    cidr_blocks = ["0.0.0.0/0"] # Allows access to your container on port 8082
   }
 
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"] # Allow HTTPS traffic
   }
 
   egress {

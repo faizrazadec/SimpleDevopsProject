@@ -3,3 +3,8 @@ variable "instance_name" {
   type        = string
   default     = "devops"
 }
+
+variable "ssh_public_key" {
+  description = "SSH Public Key"
+  type        = string
+}
