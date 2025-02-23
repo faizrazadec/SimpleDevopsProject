@@ -16,6 +16,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami             = "ami-0f18401e48cde2516"
   instance_type   = "t2.micro"
+  key_name        = aws_key_pair.my_key_pair.key_name
   security_groups = [aws_security_group.allow_ssh_and_http.name]
 
   # Read the shell script from the init.sh file and provide it as user_data

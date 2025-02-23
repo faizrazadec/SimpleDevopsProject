@@ -19,6 +19,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo systemctl start docker
 sudo systemctl enable docker
 
-# # Run the Docker container exposing port 8280
-# docker pull faizrazadec/simple_devops:latest
-# docker run -d -p 8082:80 faizrazadec/simple_devops
+# Run the Docker container exposing port 8280
+sudo docker pull faizrazadec/simple_devops:latest
+sudo docker run -d -p 8082:80 faizrazadec/simple_devops
